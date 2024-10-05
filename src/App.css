@@ -1,0 +1,89 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.note-form {
+  background-color: #d0d3d4;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+.note-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.note-form textarea {
+  border: none;
+  outline: none;
+  resize: vertical;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.note-form button {
+  background-color: #f4b400;
+  align-self: flex-end;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.note-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.note {
+  border-radius: 8px;
+  padding: 15px;
+
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 5px 15px;
+  transition: box-shadow 0.3s ease;
+}
+.note:hover {
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.4);
+}
+
+.note h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+}
+.note p {
+  font-size: 14px;
+}
+.note-delete {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.note-delete button {
+  width: 100px;
+  height: 45px;
+  margin-top: 10px;
+  align-self: flex-end;
+  background-color: #d32f2f;
+  color: white;
+}
+
+.note-edit {
+  display: flex;
+  flex-direction: column;
+}
+.note-edit button {
+  width: 100px;
+  height: 45px;
+  background-color: #34a853; /* Green for save button */
+  color: white;
+  align-self: flex-end;
+  border: none;
+  cursor: pointer;
+}
