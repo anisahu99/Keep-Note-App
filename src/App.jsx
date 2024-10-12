@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import NoteForm from "./NoteForm";
 import Note from "./Note";
 
@@ -21,6 +21,18 @@ function App() {
     setNotes(updateNotes);
   }
 
+  useEffect(()=>{
+    const savedNotes = JSON.parse(localStorage.getItem("notes"));
+    if(savedNotes && savedNotes.length > 0){
+      setNotes(savedNotes);
+    } 
+  },[]);
+  useEffect(()=>{
+    if (notes.length > 0) {
+      localStorage.setItem("notes", JSON.stringify(notes));
+    }
+  },[notes]);
+
   return (
     <>
       <h2>Keep Note</h2>
@@ -37,6 +49,7 @@ function App() {
             editNote={editNote}
           />
         ))}
+        <button onClick={()=>localStorage.clear()}>Clear Local Storage</button>
       </div>
     </>
   );
