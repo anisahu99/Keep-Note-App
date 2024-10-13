@@ -45,10 +45,10 @@
 .note {
   border-radius: 8px;
   padding: 15px;
-
   box-shadow: rgba(255, 255, 255, 0.2) 0px 5px 15px;
   transition: box-shadow 0.3s ease;
 }
+
 .note:hover {
   box-shadow: 0 2px 10px rgba(255, 255, 255, 0.4);
 }
@@ -57,14 +57,17 @@
   margin: 0 0 10px 0;
   font-size: 18px;
 }
+
 .note p {
   font-size: 14px;
 }
+
 .note-delete {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
+
 .note-delete button {
   width: 100px;
   height: 45px;
@@ -78,6 +81,7 @@
   display: flex;
   flex-direction: column;
 }
+
 .note-edit button {
   width: 100px;
   height: 45px;
@@ -86,4 +90,54 @@
   align-self: flex-end;
   border: none;
   cursor: pointer;
+}
+
+/* Media Query for Smartphone Screens */
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem;
+  }
+
+  .note-form {
+    padding: 10px;
+  }
+
+  .note-form textarea {
+    font-size: 14px;
+  }
+
+  .note-form button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .note-container {
+    gap: 15px;
+  }
+
+  .note {
+    padding: 10px;
+  }
+
+  .note h3 {
+    font-size: 16px;
+  }
+
+  .note p {
+    font-size: 12px;
+  }
+
+  .note-delete button,
+  .note-edit button {
+    width: 80px;
+    height: 40px;
+  }
+
+  .note-delete button {
+    font-size: 14px;
+  }
+
+  .note-edit button {
+    font-size: 14px;
+  }
 }
