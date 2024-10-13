@@ -93,7 +93,7 @@
 }
 
 /* Media Query for Smartphone Screens */
-@media (max-width: 740px) {
+@media (max-width: 1080px) {
   #root {
     padding: 1rem;
   }
